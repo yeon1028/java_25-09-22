@@ -1,0 +1,19 @@
+package day16;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Lambda02 {
+
+	public static void main(String[] args) {
+		
+		Map<String, Integer> map = new HashMap<>();
+		map.put("hong" , 89);
+		map.put("kim" , 89);
+		map.put("lee" , 89);
+		map.put("park" , 89);
+		map.put("yoon" , 89);
+		
+	}
+
+}

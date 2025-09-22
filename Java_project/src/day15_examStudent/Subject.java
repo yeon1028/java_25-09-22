@@ -1,0 +1,106 @@
+package day15_examStudent;
+
+import java.util.Objects;
+
+public class Subject {
+
+	private String code;
+	private String subject;
+	private String date;
+	private int time;
+	private String teacher;
+	private String hall;
+	
+	// 기본 생성자
+	public Subject() {	}
+	// equals / remove / contains => object 일치여부 확인
+	
+	public Subject(String code) {
+		this.code = code;
+	}
+	
+	public Subject(String code, String subject, String date, 
+			int time, String teacher, String hall) {
+		this.code = code;
+		this.subject = subject;
+		this.date = date;
+		this.time = time;
+		this.teacher = teacher;
+		this.hall = hall;
+	}
+	
+	// equals 모든 요소가 일치하거나, 실제 주소가 같거나
+	// 수정
+	@Override
+	public int hashCode() {
+		return Objects.hash(code);
+	}
+	
+	// a.equals(b) -> a랑 b랑 같은지 비교
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) // 주소가 같은지 확인
+			return true;
+		if (obj == null) 
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Subject other = (Subject) obj;
+		return Objects.equals(code, other.code);
+	}
+
+	// 메서드
+	public void printInfo() {
+		System.out.println("과목코드: "+code+" | 과목명: "+subject+" | 수강기간: "+date);
+		System.out.println("시수: "+time+" | 강사명: "+teacher+" | 강의장: "+hall);
+	}
+	
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
+
+	public String getSubject() {
+		return subject;
+	}
+
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}
+
+	public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
+
+	public int getTime() {
+		return time;
+	}
+
+	public void setTime(int time) {
+		this.time = time;
+	}
+
+	public String getTeacher() {
+		return teacher;
+	}
+
+	public void setTeacher(String teacher) {
+		this.teacher = teacher;
+	}
+
+	public String getHall() {
+		return hall;
+	}
+
+	public void setHall(String hall) {
+		this.hall = hall;
+	}
+	
+}

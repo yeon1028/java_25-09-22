@@ -1,0 +1,45 @@
+package day16;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class StreamEx01 {
+
+	public static void main(String[] args) {
+		// class 생성 Student (이름, 점수)
+		
+		// Student class List 생성  객체를 추가 (10명)
+		List<Student> list = new ArrayList<>();
+		
+		list.add(new Student("홍길동", 56));
+		list.add(new Student("김길동", 65));
+		list.add(new Student("이길동", 84));
+		list.add(new Student("박길동", 89));
+		list.add(new Student("최길동", 66));
+		list.add(new Student("신짱구", 50));
+		list.add(new Student("김철수", 91));
+		list.add(new Student("이순신", 92));
+		list.add(new Student("강감찬", 94));
+		list.add(new Student("유관순", 91));
+		
+		// 학생 출력 => 홍길동 : 56
+		list.stream()
+			.forEach(n -> System.out.printf(n.getName(), n.getScore()));
+		
+		
+		// 점수합계 출력
+		int sum;
+		
+		// 전체 인원수
+		
+		
+		// 정렬 : 가나다라 이름순으로 정렬 (오름차순)
+		
+		
+		// 정렬 : 점수가 높은 순으로 정렬 (내림차순)
+
+		 
+	}
+
+}

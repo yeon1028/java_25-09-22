@@ -1,0 +1,42 @@
+package day17_Word;
+
+import java.util.Scanner;
+
+public class WordMain {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		WordController wc = new WordController();
+		
+		wc.addWord(); 	// 기본 추가되는 word
+		
+		int menu = 0;
+		
+		while(true) {
+			menu = wc.menuPrint(scan);
+			
+			if(menu == 7) {
+				System.out.println("종료합니다.");
+				break;
+			}
+			
+			switch(menu) {
+			case 1: wc.insertWord(scan); break;
+			case 2: wc.insertWord(scan); break;
+			case 3: wc.insertWord(scan); break;
+			case 4: wc.insertWord(scan); break;
+			case 5: wc.insertWord(scan); break;
+			case 6: wc.insertWord(scan); break;
+			default: 
+				System.out.println("없는 메뉴입니다.");
+
+			}
+		}
+		
+		scan.close();
+
+	}
+
+}

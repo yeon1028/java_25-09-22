@@ -1,0 +1,15 @@
+package day06;
+
+public class Method01 {
+
+	public static void main(String[] args) {
+		/* method = 기능 = 함수 = function
+		 * class : 변수(가지는 요소), 메서드(해야하는 기능)
+		 * main : 컴파일러가 실행을 위해 가장 먼저 찾는 메서드
+		 * 
+		 */
+		
+
+	}
+
+}

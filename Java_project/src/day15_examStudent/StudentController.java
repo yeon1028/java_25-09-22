@@ -1,0 +1,114 @@
+package day15_examStudent;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class StudentController implements StudentProgram{
+	
+	private List<Student> list = new ArrayList<>();
+
+
+	public int menuPrint(Scanner sc) {
+		System.out.println("-- menu --");
+		System.out.println("1. 학생 등록 | 2. 학생 리스트 | 3. 학생 검색");
+		System.out.println("4. 학생 수정 | 5. 학생 삭제");
+		System.out.println("6. 수강 신청 | 7. 수강 철회 | 8. 과목별 명단 조회");
+		System.out.println("9. 종료");
+		System.out.println("menu >");
+		return sc.nextInt();
+	}
+
+	
+	@Override
+	public void intsertStudent(Scanner sc) {
+//		System.out.println("학번 >>");
+//		int num = sc.nextInt();
+		
+//		if(list.contains(new Student(num))) {
+//			System.out.println("이미 있는 학번입니다.");
+//			System.out.println("다시 입력해주세요.");
+//			return;
+//		}
+		
+		System.out.println("이름: ");
+		String name = sc.next();
+		System.out.println("나이: ");
+		String age = sc.next();
+		System.out.println("전화번호: ");
+		String phone = sc.next();
+		System.out.println("주소: ");
+		String add = sc.next();
+		System.out.println("등록이 완료되었습니다.");
+		
+	}
+
+
+	@Override
+	public void printStudent() {
+		if (list.isEmpty()) {
+			System.out.println("등록된 학생이 없습니다.");
+			return;
+		}
+		
+		System.out.println("등록된 ");
+	}
+
+
+	@Override
+	public void searchStudent(Scanner sc) {
+		System.out.println("검색할 학생의 이름을 입력하세요 >>");
+		String name = sc.next();
+		if(list.contains(name)) {
+			System.out.println(name);
+			return;
+		}
+		System.out.println("검색한 학생이 없습니다.");
+	}
+
+
+	@Override
+	public void insertSubject(Scanner sc) {
+		// 수강신청
+//		System.out.println("학번 입력 >");
+//		String id = sc.next();
+//		int index = list.indexof(new Student(num));
+//		if(index == -1) {
+//			System.out.println("신청 학생이 없습니다.");
+//			return;
+//		}
+		System.out.println("수강신청 목록");
+		for(Student s : list) {
+			s.printSubject();
+		}
+	}
+
+
+	@Override
+	public void deleteSubject(Scanner sc) {
+		// 수강 철회
+	}
+
+
+	public void modifyStudent(Scanner scan) {
+		// 학생 정보 수정
+		// 학번을 입력받아 해당 학번을 삭제하고, 다시 등록
+		
+	}
+
+
+	public void deleteStudent(Scanner scan) {
+		// 학생 삭제
+		
+	}
+
+
+	public void subjectStudentList(Scanner scan) {
+		// 과목별 학생 리스트
+		System.out.println("과목 번호 >");
+		String code = scan.next();
+		
+	}
+	
+}
+	

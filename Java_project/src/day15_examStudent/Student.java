@@ -1,0 +1,141 @@
+package day15_examStudent;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
+public class Student {
+	// 멤버변수 : 학번, 이름, 나이, 전화번호, 주소	
+	private String id;
+	private String name;
+	private int age;
+	private String phone;
+	private String add;
+	
+	// 각자 본인이 신청한 수강목록
+	private List<Subject> subject = new ArrayList<>();
+	
+	// 생성자
+	public Student() { }
+	
+	public Student(String id, String name, int age, String phone, String add) {
+		this.id = id;
+		this.name = name;
+		this.age = age;
+		this.phone = phone;
+		this.add = add;
+	}
+	
+	public Student(String id) {
+		this.id = id;
+	}
+	
+	// id만 일치하면 일치하는 객체로 설정
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Student other = (Student) obj;
+		return Objects.equals(id, other.id);
+	}
+	
+	// 필요한 메서드 추가
+	
+	// 내 정보를 출력하는 메서드
+	public void printInfo() {
+		System.out.println(name+" ("+id+" / "+age);
+		System.out.println(phone+" / "+add);
+	}
+	
+	// 개인 수강신청
+	// 과목의 객체가 들어오면 내 수강리스트에 추가
+	// 배열[i] => list.get(i)
+	public void insertSubject(Subject sub) {
+		
+		// 이미 수강신청을 한 과목일 경우
+		for(int i=0; i<subject.size(); i++) {
+			if(subject.get(i).getSubject().equals(sub.getSubject())) {
+				System.out.println("이미 추가한 과목입니다.");
+				return;
+			}
+		}
+		subject.add(sub);
+		System.out.println("수강신청 완료!");
+		
+	}
+	
+	// 개인 수강철회
+	// ★ 과목번호를 주면 그 과목번호를 삭제하는 메서드 추가
+	public void deleteSubject(String code) {
+		if(subject.remove(new Subject(code))) {
+			System.out.println("수강 삭제 완료!");
+			return;
+		}
+		System.out.println("삭제할 과목이 없습니다.");
+	}
+	
+	// 개인 수강목록 확인 -> print
+	public void printSubject() {
+		for(Subject s : subject) {
+			System.out.println(s);
+		}
+	}
+	
+
+	@Override
+	public String toString() {
+		return "학번: " + id + ", 이름: " + name + ", 나이: " + age 
+				+ ", 전화번호: " + phone + ", 주소: " + add;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	
+	public String getAdd() {
+		return add;
+	}
+	
+	public void setAdd(String add) {
+		this.add = add;
+	}
+
+
+}

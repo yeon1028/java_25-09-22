@@ -1,0 +1,10 @@
+package day18_Bank;
+
+public class Customer {
+
+	public Object getAccountNumber() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,39 @@
+package day06;
+
+public class Method03 {
+	// 메서드 정의
+	// 두 정수의 합을 리턴하는 메서드
+	public int a(int num1, int num2) {
+		return num1 + num2;
+	}
+	// 두 정수의 차를 리턴하는 메서드
+	public int b(int num1, int num2) {
+		return num1 - num2;
+	}
+	// 두 정수의 곱을 리턴하는 메서드
+	public int c(int num1, int num2) {
+		return num1 * num2;
+	}
+	// 두 정수의 나누기를 리턴하는 메서드 (double)
+	public int d(int num1, int num2) {
+		return num1 / num2;
+	}
+	// 두 정수의 나머지를 리턴하는 메서드
+	public int e(int num1, int num2) {
+		return num1 % num2;
+	}
+
+	public static void main(String[] args) {
+	// + - * / % 기능을 하는 메서드 생성
+	// main에서 호출 => 값을 출력
+	Method03 m3 = new Method03();
+		
+	// 두 수의 + - * / %의 결과를 메서드를 호출하여 출력
+	int num1 = 10, num2 = 20;
+	int a = m3.a(num1, num2);
+	System.out.println(a);
+		
+
+	}
+
+}

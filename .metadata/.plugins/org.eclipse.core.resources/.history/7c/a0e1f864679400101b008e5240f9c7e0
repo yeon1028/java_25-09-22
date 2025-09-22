@@ -1,0 +1,12 @@
+package day17_Word;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Word {
+	// word, List<String> mean
+	private String word;
+	private List<String> mean = new ArrayList<>();
+	
+	
+}

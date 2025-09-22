@@ -1,0 +1,15 @@
+package day18_Bank;
+
+public class Customer {
+	
+	private String bankName;
+	private String customerName;
+	private String accountNum;
+	private int balance;
+
+	public Object getAccountNumber() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

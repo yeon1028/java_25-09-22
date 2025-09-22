@@ -1,0 +1,32 @@
+package day18_Bank;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Bank {
+	// 은행명
+	// 예금주
+	
+	private List<Customer> customers = new ArrayList<>();
+	private String bankName;
+	
+	public Bank(String bankName) {
+		this.bankName = bankName;
+	}
+	
+	public void addCustomer(Customer customer) {
+		customers.add(customer);
+	}
+	
+	public Customer findCustomer(String accountNumber) {
+		for (Customer c : customers) {
+			if(c.getAccountNumber().equals(accountNumber))
+				return c;
+		}
+		return null;
+	}
+	
+	public String getBankName() {
+		return bankName;
+	}
+}

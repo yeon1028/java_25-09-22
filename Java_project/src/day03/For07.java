@@ -1,0 +1,31 @@
+package day03;
+
+import java.util.Scanner;
+
+public class For07 {
+
+	public static void main(String[] args) {
+		// 숫자를 입력받아 소수인지 아닌지 출력
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("숫자를 입력하세요:");
+		int num = sc.nextInt();
+		int cnt = 0;
+		
+		for(int i=1; i<= num; i++) {
+				if(num % i == 0) {
+					cnt++;
+				}
+			}
+			
+			if(cnt == 2) {
+				System.out.println("소수입니다.");
+			} else {
+				System.out.println("소수가 아닙니다.");
+			}
+			
+			sc.close();
+			
+	}
+
+}

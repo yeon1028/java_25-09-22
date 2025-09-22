@@ -1,0 +1,35 @@
+package day16;
+
+import java.util.ArrayList;
+
+public class Stream02 {
+	
+	public static void main(String[] args) {
+		ArrayList<Integer> list = new ArrayList<>();
+		for(int i=0; i<10; i++) {
+			list.add((int)(Math.random()*10)+1);
+		}
+		System.out.println(list);
+		
+		list.stream().forEach(n -> System.out.println(n));
+		// 중복제거 => 출력
+		list.stream().distinct().forEach(n -> System.out.println(n+" "));
+		System.out.println();
+		
+		// 정렬, 중복제거 => 출력
+		list.stream()
+			.distinct()
+			.sorted()
+			.forEach(n -> System.out.println(n+" "));
+		System.out.println();
+		
+		// 중복제거 후 합계 Stream<Integer>
+		// Stream<Integer> => IntStream 으로 변경
+		int sum = list.stream()
+			.distinct()
+			.mapToInt(n -> n.intValue())
+			.sum();
+		System.out.println(sum);
+	}
+
+}

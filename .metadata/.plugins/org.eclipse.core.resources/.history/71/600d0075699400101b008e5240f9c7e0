@@ -1,0 +1,77 @@
+package day17_Word;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class WordController {
+	private List<Word> wordBook = new ArrayList<>();
+
+	public int menuPrint(Scanner scan) {
+		// 메뉴 출력 > 입력받기
+		System.out.println("1. 단어 등록 | 2. 단어 검색 | 3. 단어 수정");
+		System.out.println("4. 단어 출력 | 5. 단어 삭제 | 6. 단어 파일로 출력");
+		System.out.println("7. 종료");
+		System.out.println("menu >>");
+		
+		return scan.nextInt();
+	}
+
+	public void addWord() {
+		// 기본 단어 추가
+		
+		Word w = new Word("dog");
+		List<String> tmp = new ArrayList<>();
+		tmp.add("강아지");
+		tmp.add("개");
+		tmp.add("바둑이");
+		w.setMean(tmp);
+		
+		wordBook.add(w);
+		
+		List<String> tmp2 = new ArrayList<>();		
+		tmp2.add("고양이");
+		tmp2.add("야옹이");
+		tmp2.add("나비");
+		Word w2 = new Word("cat", tmp2);
+		wordBook.add(w2);
+		
+		List<String> tmp3 = new ArrayList<>();		
+		tmp3.add("돼지");
+		tmp3.add("꿀꿀이");
+		Word w3 = new Word("pig", tmp3);
+		wordBook.add(w3);
+		
+	}
+
+	public void insertWord(Scanner scan) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void searchWord(Scanner scan) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void modifyWord(Scanner scan) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void printWord() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void deleteWord(Scanner scan) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void printFile() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

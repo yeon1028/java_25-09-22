@@ -1,0 +1,36 @@
+package day16;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+public class AnonymousClass02 {
+
+	public static void main(String[] args) {
+		// list의 sort
+		
+		List<Integer> list = new ArrayList<>();
+		
+		for(int i=0; i<10; i++) {
+			list.add((int)(Math.random()*10)+1);
+		}
+		System.out.println(list);
+		
+		// sort
+		System.out.println("- - 정렬 후 - -");
+		Collections.sort(list);
+		System.out.println(list);
+		
+		// list.sort(Comparator를 구현한 객체); : 정렬이 가능
+		// Comparator 인터페이스를 구현한 구현체를 넣어야 함 (익명클래스 사용)
+		// compare : 숫자 compareTo : 문자
+		// compareTo : 사전상 앞에 있으면 - 같으면 0 뒤에 있으면 +
+		
+		list.sort(new Comparator<Integer>());;
+		
+		
+
+	}
+
+}

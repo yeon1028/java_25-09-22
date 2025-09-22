@@ -1,0 +1,23 @@
+package day17;
+
+enum Category{
+	// 상품 카테고리 
+	FOOD(0.1),	// 식품 : 10%
+	CLOTHING(0.8),	// 의류 : 8%
+	ELECTRONIC(0.15) 	// 전자제품 : 15%
+	
+	private final double vatRate;
+	
+	Category(double vatRate) {
+		this.vatRate = vatRate;
+	}
+}
+
+public class EnumEx01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,22 @@
+package day16;
+
+public class StreamEx01 {
+
+	public static void main(String[] args) {
+		// class 생성 Student (이름, 점수)
+		
+		// Student class List 생성  객체를 추가 (10명)
+		
+		// 학생 출력 => 홍길동 : 56
+		
+		// 점수합계 출력
+		
+		// 전체 인원수
+		
+		// 정렬 : 가나다라 이름순으로 정렬 (오름차순)
+		
+		// 정렬 : 점수가 높은 순으로 정렬 (내림차순)
+
+	}
+
+}

@@ -1,0 +1,170 @@
+package day15_examStudent;
+
+import java.util.Arrays;
+
+public class Student {
+	// 멤버변수 : 학번, 이름, 나이, 전화번호, 주소
+	// 수강과목(Subject[5] class), cnt
+	// 수강과목을 추가하는 메서드
+	// 수강과목을 취소하는 메서드
+	// 수강배열을 출력하는 메서드
+	// 학생정보를 출력하는 메서드
+	
+	private int id;
+	private String name;
+	private int age;
+	private String phone;
+	private String add;
+	
+	private Subject[] subject = new Subject [5]; // 각자 본인이 신청한 수강목록
+	private int cnt; // 수강과목 수 (수강신청의 배열을 다루기 위한 index)
+	
+	
+	public Student() { }
+	
+	public Student(int id, String name, int age, String phone, String add) {
+		this.id = id;
+		this.name = name;
+		this.age = age;
+		this.phone = phone;
+		this.add = add;
+	}
+	
+	// 내가 필요한 메서드 추가하기
+	
+	// 수강과목의 객체(Subject)가 들어오면 내 수강배열에 추가
+	public void insertSubject(Subject sub) {
+		// 배열이 꽉 찼을 경우 arraycopy
+		if(cnt == subject.length) {
+			// 배열 늘려주기
+			Subject[] tmp = new Subject[subject.length+5];
+			// 배열 복사
+			System.arraycopy(subject, 0, tmp, 0, subject.length);
+			// 기존 배열을 늘려준 배열로 바꾸기
+			subject = tmp;
+		}
+		
+		// 이미 수강신청을 한 과목일 경우
+		for(int i=0; i<cnt; i++) {
+			if(subject[i].getSubject().equals(getSubject())) {
+				System.out.println("이미 추가한 과목입니다.");
+				return;
+			}
+		}
+		subject[cnt] = sub;
+		cnt++;
+	}
+	
+	// ★ 과목번호를 주면 그 과목번호를 삭제하는 메서드 추가
+	public void deleteSubject(int code) {
+		// subject 배열에서 subNum가 몇번지에 있는지 찾기
+		int index = -1;
+		if(code == 0) {
+			return;
+		}
+		for(int i=0; i<cnt; i++) {
+			if(subject[i].getCode()==code) {
+				index = i;
+				break;
+			}
+		}
+		if(index == -1) {
+			// 찾는 값이 없다면
+			System.out.println("찾는 과목이 없습니다.");
+			return;
+		}
+		// 삭제 : index 번지부터 뒷번지를 앞으로 옮기는 작업
+		for(int i=index; i<cnt-1; i++) {
+			subject[i] = subject[i+1];
+		}
+		
+		// 마지막 끝번지는 null 처리
+		subject[cnt-1] = null;
+		cnt--;
+		System.out.println("수강 철회 완료");
+	}
+	
+	
+	// 내 정보를 출력하는 메서드
+	public void printInfo() {
+		System.out.println(name+" ("+id+" / "+age);
+	}
+	
+	// 내 수강정보를 출력하는 메서드
+	public void pringSubject() {
+		if(cnt == 0) { 
+			System.out.println("수강 과목이 없습니다.");
+		}
+		for(int i=0; i<cnt; i++) {
+			subject[i].printInfo();
+		}
+		System.out.println("- - - - - - - - - -");
+	}
+	
+//	내가 작성했던 수강과목 추가 메서드
+//	public void addSubject(Subject subject) {
+//		if(cnt == this.subject.length) {
+//			Subject[] subjectTmp = new Subject[this.subject.length+5];
+//			System.arraycopy(this.subject, 0, subjectTmp, 0, this.subject.length);
+//			this.subject = subjectTmp;
+//		}
+//		this.subject[cnt] = subject;
+//		cnt++;
+//	}
+	
+
+	@Override
+	public String toString() {
+		return "학번: " + id + ", 이름: " + name + ", 나이: " + age 
+				+ ", 전화번호: " + phone + ", 주소: " + add;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	
+	public String getAdd() {
+		return add;
+	}
+	
+	public void setAdd(String add) {
+		this.add = add;
+	}
+
+	public Subject[] getSubject() {
+		return subject;
+	}
+
+	public void setSubject(Subject[] subject) {
+		this.subject = subject;
+	}
+
+}

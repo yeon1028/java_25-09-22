@@ -1,0 +1,45 @@
+package day18_Bank;
+
+public class Customer {
+	
+	private String bankName;
+	private String customerName;
+	private String accountNum;
+	private int balance; 
+	
+	public Customer(String bankName, String customerName, String accountNum, int balance) {
+		this.bankName = bankName;
+		this.customerName = customerName;
+		this.accountNum = accountNum;
+		this.balance = balance;
+	}
+	
+	
+	public String getBankName() {
+		return bankName;
+	}
+
+	public String getCustomerName() {
+		return customerName;
+	}
+
+	public String getAccountNum() {
+		return accountNum;
+	}
+
+	public int getBalance() {
+		return balance;
+	}
+
+
+
+
+
+
+
+	public Object getAccountNumber() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,29 @@
+package day06;
+
+import java.util.Scanner;
+
+public class MethodEx01 {
+
+	public static void main(String[] args) {
+		/* 계산기 만들기
+		   -- menu --
+		   1.더하기 | 2.빼기 | 3.곱하기 | 4.나누기 | 5.나머지 | 6.종료
+		   >> 메뉴선택 > 1
+		   >> 숫자를 입력하세요(두 정수) > 1 5
+		   >> 결과 : 1 + 5 = 6
+		   
+		 * 덧셈, 뺄셈, 곱셈, 나눗셈, 나머지는 Method03에서 만든 메서드를 호출
+		 */
+		
+		Method03 m3 = new Method03();
+		Scanner sc = new Scanner(System.in);
+		
+		do {
+			
+		} while(true);
+		
+		
+
+	}
+
+}

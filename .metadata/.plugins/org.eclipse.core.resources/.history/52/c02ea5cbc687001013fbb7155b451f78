@@ -1,0 +1,29 @@
+package day06;
+
+public class Method02 {
+	
+	// 메서드 생성 위치
+	/* 두 정수가 주어지면 두 수의 합을 리턴하는 메서드
+	 * 리턴타입 : int
+	 */
+	public int sum1(int num1, int num2) {
+	return num1 + num2;
+	}
+	
+	/* 두 정수가 주어지면 두 수의 합을 출력하는 메서드
+	 * 리턴타입 : void
+	 */
+	public void sum2(int num1, int num2) {
+		System.out.print(num1 + num2);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Method01 me = new Method01();
+		int hap1 = me.sum(30, 66);
+		System.out.println(hap1);
+
+	}
+
+}

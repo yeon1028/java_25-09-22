@@ -1,0 +1,80 @@
+package day11_StudentManager;
+
+public class Subject {
+
+	// 멤버변수 : 과목코드, 과목명, 수강기간, 시수, 강사명, 강의장...
+	// 하나의 수강클래스를 출력하는 메서드
+
+	public Subject() {	}
+
+	private int code;
+	private String subject;
+	private String date;
+	private int time;
+	private String teacher;
+	private String hall;
+	
+	public Subject(int code, String subject, String date, 
+					int time, String teacher, String hall) {
+		this.code = code;
+		this.subject = subject;
+		this.date = date;
+		this.time = time;
+		this.teacher = teacher;
+		this.hall = hall;
+	}
+	
+	public void printInfo() {
+		System.out.println("과목코드: "+code+" | 과목명: "+subject+" | 수강기간: "+date);
+		System.out.println("시수: "+time+" | 강사명: "+teacher+" | 강의장: "+hall);
+	}
+
+
+	public int getCode() {
+		return code;
+	}
+
+	public void setCode(int code) {
+		this.code = code;
+	}
+
+	public String getSubject() {
+		return subject;
+	}
+
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}
+
+	public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
+
+	public int getTime() {
+		return time;
+	}
+
+	public void setTime(int time) {
+		this.time = time;
+	}
+
+	public String getTeacher() {
+		return teacher;
+	}
+
+	public void setTeacher(String teacher) {
+		this.teacher = teacher;
+	}
+
+	public String getHall() {
+		return hall;
+	}
+
+	public void setHall(String hall) {
+		this.hall = hall;
+	}
+}

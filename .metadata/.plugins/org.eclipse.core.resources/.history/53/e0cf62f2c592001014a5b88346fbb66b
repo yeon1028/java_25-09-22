@@ -1,0 +1,24 @@
+package day16;
+
+import java.util.ArrayList;
+
+public class Student {
+	
+	public void student() {
+
+		ArrayList<String> studentList = new ArrayList<>();
+		studentList.add("홍길동 : 56");
+		studentList.add("홍길동 : 56");
+		studentList.add("홍길동 : 56");
+		studentList.add("홍길동 : 56");
+		studentList.add("홍길동 : 56");
+		studentList.add("홍길동 : 56");
+		studentList.add("홍길동 : 56");
+		studentList.add("홍길동 : 56");
+		studentList.add("홍길동 : 56");
+		studentList.add("홍길동 : 56");
+		
+		
+	}
+	
+}

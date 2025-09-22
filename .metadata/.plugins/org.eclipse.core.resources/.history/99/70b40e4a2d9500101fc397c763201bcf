@@ -1,0 +1,51 @@
+package day18_Bank;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class BankController {
+
+	private List<Bank> bank = new ArrayList<>();
+	private Customer myBank;
+	
+	
+	public void addBank() {
+		bank.add(new Bank("우리은행"));
+		bank.add(new Bank("신한은행"));
+		
+	}
+
+	public void addCustomer() {
+		// 우리은행
+		bank.get(0).addCustomer(new Customer(bank.get(0).getBankName(), "홍길동", "1001", 10000));
+		bank.get(0).addCustomer(new Customer(bank.get(0).getBankName(), "이순신", "1002", 10000));
+		bank.get(0).addCustomer(new Customer(bank.get(0).getBankName(), "신짱구", "1003", 10000));
+		
+		// 신한은행
+		bank.get(1).addCustomer(new Customer(bank.get(1).getBankName(), "홍길동", "2001", 10000));
+		bank.get(1).addCustomer(new Customer(bank.get(1).getBankName(), "신짱아", "2002", 10000));
+		bank.get(1).addCustomer(new Customer(bank.get(1).getBankName(), "강감찬", "2003", 10000));
+		
+	}
+
+	public void myBank(Scanner scan) {
+		// 내 계좌 설정
+		System.out.println("- - 내 계좌 설정 - -");
+		this.myBank = searchBank(scan);
+		myBank.printAccountInfo();
+		
+	}
+
+	private Customer searchBank(Scanner scan) {
+		// 내 계좌 리턴
+		System.out.println("은행> ");
+		System.out.println("1. 우리은행\n2.신한은행");
+		String num = scan.next();
+		if(num.equals("1") || num.equals("2")) {
+			System.out.println("은행 선택 오류!!");
+		}
+		return null;
+	}
+
+}

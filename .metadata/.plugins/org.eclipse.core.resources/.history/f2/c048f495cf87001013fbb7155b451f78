@@ -1,0 +1,72 @@
+package day06;
+
+public class Method03 {
+	// 메서드 정의
+	// 두 정수의 합을 리턴하는 메서드
+	public int a(int num1, int num2) {
+		return num1 + num2;
+	}
+	// 두 정수의 차를 리턴하는 메서드
+	public int b(int num1, int num2) {
+		return num1 - num2;
+	}
+	// 두 정수의 곱을 리턴하는 메서드
+	public int c(int num1, int num2) {
+		return num1 * num2;
+	}
+	// 두 정수의 나누기를 리턴하는 메서드 (double)
+	public double d(int num1, int num2) {
+		if(num2 == 0) {
+			return -9999;
+		}
+		return (double)num1 / num2;
+	}
+	// 두 정수의 나머지를 리턴하는 메서드
+	public int e(int num1, int num2) {
+		if(num2 == 0) {
+			return -9999;
+		}
+		return num1 % num2;
+	}
+
+	public static void main(String[] args) {
+	// + - * / % 기능을 하는 메서드 생성
+	// main에서 호출 => 값을 출력
+	Method03 m3 = new Method03();
+	
+	// 다른 클래스에서 생성한 메서드 호출
+	Method02 m2 = new Method02();
+	int s = m2.sum1(0, 0);
+	System.out.println(s);
+	
+		
+	// 두 수의 + - * / %의 결과를 메서드를 호출하여 출력
+	int num1 = 10, num2 = 0;
+	
+	int a = m3.a(num1, num2);
+	System.out.println(a);
+	
+	int b = m3.b(num1, num2);
+	System.out.println(b);
+	
+	int c = m3.c(num1, num2);
+	System.out.println(c);
+	
+	double d = m3.d(num1, num2);
+	if(d == -9999) {
+		System.out.println("피연산자가 0일 수 없습니다.");
+	} else {
+		System.out.println(d);		
+	}
+	
+	int e = m3.e(num1, num2);
+	if(e == -9999) {
+		System.out.println("피연산자가 0일 수 없습니다.");
+	} else {
+		System.out.println(e);		
+	}
+		
+
+	}
+
+}

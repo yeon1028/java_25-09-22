@@ -1,0 +1,11 @@
+package day17_Word;
+
+public class WordMain {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+
+	}
+
+}

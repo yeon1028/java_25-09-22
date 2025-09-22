@@ -1,0 +1,27 @@
+package day18_Bank;
+
+import java.util.Scanner;
+
+public class BankController {
+
+	public static void main(String[] args) {
+		
+
+	} //main
+
+	public void addBank() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void addCustomer() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void myBank(Scanner scan) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

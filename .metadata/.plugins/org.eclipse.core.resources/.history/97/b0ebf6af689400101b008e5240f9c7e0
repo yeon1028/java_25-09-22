@@ -1,0 +1,47 @@
+package day17_Word;
+
+import java.util.Scanner;
+
+public class WordController {
+
+	public int menuPrint(Scanner scan) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public void addWord() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void insertWord(Scanner scan) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void searchWord(Scanner scan) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void modifyWord(Scanner scan) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void printWord() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void deleteWord(Scanner scan) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void printFile() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

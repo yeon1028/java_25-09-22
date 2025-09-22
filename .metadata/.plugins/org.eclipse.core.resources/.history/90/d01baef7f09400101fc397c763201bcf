@@ -1,0 +1,12 @@
+package day18;
+
+public class Thread01 {
+
+	public static void main(String[] args) {
+		/* Thread(쓰레드) : 실제로 작업을 수행하는 단위
+		   - 프로그램이 실행되면 OS로부터 메모리를 할당받아 process의 상태가 됨.
+		 */
+
+	}
+
+}

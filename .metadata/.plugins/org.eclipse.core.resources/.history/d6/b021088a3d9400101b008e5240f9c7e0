@@ -1,0 +1,14 @@
+package day17;
+
+public class File04 {
+
+	public static void main(String[] args) {
+		// D:\web_java_pcy\memo
+		
+		String fileName = "D:\\web_java_pcy\\memo\\writer.txt";
+		// 파일이름 (경로 + 파일명 + 확장자)
+		FileWriter fw = new FileWriter(fileName);
+
+	}
+
+}

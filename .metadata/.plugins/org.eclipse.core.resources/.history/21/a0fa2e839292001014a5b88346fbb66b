@@ -1,0 +1,35 @@
+package day15;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class SaleController {
+	// 멤버변수로 메뉴에 대한 List
+	private List<Sale<String, Integer>> menu = new ArrayList<>();
+	
+	// 멤버변수로 주문에 대한 List
+	private List<Order<String, Integer>> order = new ArrayList<>();
+
+	public void add(Scanner scan) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void print() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void order(Scanner scan) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void orderPrint() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+}

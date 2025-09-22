@@ -1,0 +1,13 @@
+package day16;
+
+public class Stream01 {
+
+	public static void main(String[] args) {
+		// Stream(스트림)
+		/* - 자료구조를 복사하여 스트림 객체 생성
+		   - 스트림을 이용한 스트림용 연산을 수행
+		   - 연산을 수행한 스트림은 소모됨
+		 */
+	}
+
+}

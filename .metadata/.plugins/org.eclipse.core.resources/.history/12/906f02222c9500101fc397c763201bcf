@@ -1,0 +1,16 @@
+package day18_Bank;
+
+public class BankMain {
+
+	public static void main(String[] args) {
+		
+		Customer account1 = new Customer("국민은행", "홍길동", "7933", 20000);
+		Customer account2 = new Customer("우리은행", "이순신", "1002", 30000);
+		
+		System.out.println(account1);
+		System.out.println(account2);
+		
+		
+	}
+
+}

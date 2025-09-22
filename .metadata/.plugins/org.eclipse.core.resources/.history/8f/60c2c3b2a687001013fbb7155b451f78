@@ -1,0 +1,20 @@
+package day06;
+
+public class MultiArray03 {
+
+	public static void main(String[] args) {
+		// 성적표
+		/* 테스트 참가인원 : 3명
+		   이름		국어 	영어 	수학 	합계 	평균 	등수 \t
+		   홍길동 	 89 	 85		 74 	-- 	 	--  	--
+		   김길동 	 89 	 85		 74 	-- 	 	--  	--
+		   이길동 	 89 	 85		 74 	-- 	 	--  	--
+		 */
+		
+		
+		String [][] arr = new String [3][1];
+		
+
+	}
+
+}

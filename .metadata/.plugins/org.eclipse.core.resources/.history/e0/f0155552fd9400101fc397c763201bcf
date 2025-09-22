@@ -1,0 +1,35 @@
+package day18;
+
+public class Thread03 {
+
+	public static void main(String[] args) {
+		// 1부터 50까지, 51부터 100까지의 합을 구하는 두개의 Thread를 생성
+		// 두 개의 스레드가 끝나고 난 뒤
+		// Thread-0 > 1~50까지 출력 후 합계 출력 => 1초 단위로 sleep
+		// Thread-1 > 51~100까지 출력 후 합계 출력 => 1초 단위로 sleep
+		// main Thread-0 + Thread-1 합계 출력
+		
+		// Thread.sleep() : 일정시간 대기상태
+		// millisecond 단위로 1초 = 1000
+		
+		Thread th = new Thread(new Thread03_01()); 
+		th.run();
+
+	}
+
+}
+
+class Thread03_01 extends Thread {
+
+	@Override
+	public void run() {
+		int sum=0;
+		for(int i=1; i<51; i++) {
+			sum += i;
+		}
+		System.out.println(sum);
+	}
+	
+	
+	
+}

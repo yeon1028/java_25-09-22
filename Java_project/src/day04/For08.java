@@ -1,0 +1,30 @@
+package day04;
+
+public class For08 {
+
+	public static void main(String[] args) {
+		// 구구단 2~9단까지 출력
+		/* 2*1=2 ... 2*9=18
+		   ...
+		   9*1=9 ... 9*9=81
+		 */
+		
+		int dan = 4; 
+		for(int i=1; i<=9; i++) {
+			System.out.println(dan+"*"+i+"="+(dan*i));
+		}
+		System.out.println("----------");
+		
+		for(int a=1; a<=9; a++) {
+			for(int b=2; b<=9; b++) {
+				System.out.print(b+"*"+a+"="+(a*b)+" ");
+			}
+			System.out.println(); // 줄바꿈
+		}
+		
+		
+		
+		
+	}
+
+}

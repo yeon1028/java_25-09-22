@@ -1,0 +1,10 @@
+package day16;
+
+import java.util.ArrayList;
+
+public class Student {
+	
+	ArrayList<String> StudentList = new ArrayList<>();
+	StudentList.add("홍길동");
+	
+}

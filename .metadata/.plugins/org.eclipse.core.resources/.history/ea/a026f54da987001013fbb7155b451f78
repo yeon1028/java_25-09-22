@@ -1,0 +1,33 @@
+package day06;
+
+import java.util.Scanner;
+
+public class MultiArray03 {
+
+	public static void main(String[] args) {
+		// 성적표
+		/* 테스트 참가인원 : 3명
+		   이름		국어 	영어 	수학 	합계 	평균 	등수 \t
+		   홍길동 	 89 	 85		 74 	-- 	 	--  	--
+		   김길동 	 89 	 85		 74 	-- 	 	--  	--
+		   이길동 	 89 	 85		 74 	-- 	 	--  	--
+		 */
+		
+		Scanner scan = new Scanner(System.in);
+		String [] names = new String [3];
+		int[][] arr = new int[5][3];
+		//String [] subject = {"국어", "영어", "수학"};
+		
+//		int stu = names.length;
+//		int sco = subject.length;
+		System.out.println("테스트 참가인원 > ");
+		int test = scan.nextInt();
+		System.out.println("이름\t국어\t영어\t수학\t합계\t평균\t등수\t");
+		
+		
+		
+		
+
+	}
+
+}

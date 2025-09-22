@@ -1,0 +1,80 @@
+package day15_examStudent;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class StudentController implements StudentProgram{
+	
+	private List<Student> list = new ArrayList<>();
+	
+	String[] code = {"A01", "B01", "C01", "D01", "E01"};
+	String[] title = {"java", "DB", "python", "C", "javaScript"};
+	String[] date = {"25-09-01 ~ 25-09-30", "25-08-01 ~ 25-08-31", "25-07-01 ~ 25-07-16",
+					 "25-10-15 ~ 25-11-01", "25-11-02 ~ 25-11-30"};
+	int[] time = {8, 4, 6, 4, 3};
+	String[] teacher = {"kim", "lee", "park", "yoon", "choi"};
+	String[] hall = {"A 강의실", "B 강의실", "C 강의실", "D 강의실", "E 강의실"};
+	
+	// 학생을 등록하기 위한 배열 Student[] (내부에 subject[]) 
+	private Student[] students = new Student[5];
+	private int cnt;
+
+	public int menuPrint(Scanner sc) {
+		System.out.println("-- menu --");
+		System.out.println("1. 학생 등록 | 2. 학생 리스트 | 3. 학생 검색");
+		System.out.println("4. 수강 신청 | 5. 수강 철회 | 6. 종료");
+		System.out.println("menu >");
+		return sc.nextInt();
+	}
+
+	
+	@Override
+	public void intsertStudent(Scanner sc) {
+		System.out.println("등록할 학생의 정보를 입력하세요 >> ");
+		System.out.println("이름: ");
+		String name = sc.next();
+		System.out.println("나이: ");
+		String age = sc.next();
+		System.out.println("전화번호: ");
+		String phone = sc.next();
+		System.out.println("주소: ");
+		String add = sc.next();
+		
+	}
+
+
+	@Override
+	public void printStudent() {
+		if (list.isEmpty()) {
+			System.out.println("등록된 학생이 없습니다.");
+			return;
+		}
+		
+		System.out.println("등록된 ");
+	}
+
+
+	@Override
+	public void searchStudent(Scanner sc) {
+		System.out.println("검색할 학생의 이름을 입력하세요 >>");
+		String name = sc.next();
+		if(list.contains(name)) {
+			System.out.println(name);
+		}
+	}
+
+
+	@Override
+	public void insertSubject(Scanner sc) {
+		
+	}
+
+
+	@Override
+	public void deleteSubject(Scanner sc) {
+		
+	}
+	
+}
+	

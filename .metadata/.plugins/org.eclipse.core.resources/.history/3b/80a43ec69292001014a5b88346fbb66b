@@ -1,0 +1,41 @@
+package day15;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class SaleController {
+	// 멤버변수로 메뉴에 대한 List
+	private List<Sale<String, Integer>> menu = new ArrayList<>();
+	
+	// 멤버변수로 주문에 대한 List
+	private List<Order<String, Integer>> order = new ArrayList<>();
+
+	public void addMenu() {
+		// 메뉴 미리 추가
+		menu.add(new Sale<String, Integer>("김밥", 3500));
+	}
+	
+	public void add(Scanner scan) {
+		// 메뉴 추가
+		
+	}
+
+	public void print() {
+		// 메뉴 출력
+		
+	}
+
+	public void order(Scanner scan) {
+		// 주문
+		
+	}
+
+	public void orderPrint() {
+		// 주문 출력
+		
+	}
+
+	
+	
+}

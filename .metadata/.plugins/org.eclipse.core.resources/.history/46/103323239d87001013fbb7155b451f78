@@ -1,0 +1,43 @@
+package day06;
+
+import java.util.Scanner;
+
+public class Exam01 {
+
+	public static void main(String[] args) {
+		/* 숫자를 입력받아서 입력받은 숫자의 합계와 평균을 출력
+		   0이나 -숫자를 입력하면 종료
+		   - 출력 예시 : 3 + 5 + 4 + 8 + 9 
+		   				= 합, 평균
+		 */
+		
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int sum = 0;
+		int count = 0;
+		String total="";
+		
+		System.out.println("숫자를 입력해주세요(0 또는 음수면 종료): ");
+		while(true) {
+			int num = sc.nextInt();
+			if (count==0) {
+				System.out.println("입력된 숫자가 없습니다.");
+			}
+			if (num <= 0) {
+				System.out.println("프로그램을 종료합니다.");
+				break;
+			}
+			sum += num;
+			count++;
+
+			total = total.concat("+")
+					.concat(String.valueOf(num));
+			
+			
+		}
+		System.out.println(total.substring(1));
+		System.out.println("합계는 " + sum);
+		System.out.printf("평균은 %.1f " , (double)sum/count);
+	}
+}
